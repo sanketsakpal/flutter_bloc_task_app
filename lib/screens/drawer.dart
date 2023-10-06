@@ -49,87 +49,87 @@ class DrawerScreen extends StatelessWidget {
                 },
               ),
               const Divider(),
-              // BlocBuilder<TasksBloc, TasksState>(
-              //   builder: (context, state) {
-              //     return GestureDetector(
-              //       onTap: (() {
-              //         Navigator.of(context)
-              //             .pushReplacementNamed("/recycle_bin");
-              //       }),
-              //       child: ListTile(
-              //         leading: const Icon(Icons.folder_special),
-              //         title: const Text("Bin"),
-              //         trailing: Text("${state.removeTask.length} Task"),
-              //       ),
-              //     );
-              //   },
-              // ),
-              // const Divider(),
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.pushNamed(context, "/post_view");
-              //   },
-              //   child: const ListTile(
-              //     leading: Icon(Icons.feed_rounded),
-              //     title: Text("Post View"),
-              //     trailing: Text("Posts"),
-              //   ),
-              // ),
-              // const Divider(),
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.pushNamed(context, "/counter");
-              //   },
-              //   child: const ListTile(
-              //     leading: Icon(Icons.add_circle_outline_rounded),
-              //     title: Text("counter View"),
-              //     trailing: Text("counter"),
-              //   ),
-              // ),
-              // const Divider(),
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.pushNamed(context, "/counterBloc");
-              //   },
-              //   child: const ListTile(
-              //     leading: Icon(Icons.add_circle_outline_rounded),
-              //     title: Text("counter Bloc View"),
-              //     trailing: Text("counter Bloc"),
-              //   ),
-              // ),
-              // const Divider(),
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.pushNamed(context, "/CubitToCubit");
-              //   },
-              //   child: const ListTile(
-              //     leading: Icon(Icons.add_circle_outline_rounded),
-              //     title: Text("cubit to cubit"),
-              //     trailing: Text("communication"),
-              //   ),
-              // ),
-              // const Divider(),
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.pushNamed(context, "/TaskApp");
-              //   },
-              //   child: const ListTile(
-              //     leading: Icon(Icons.task),
-              //     title: Text("Udemy Task"),
-              //     trailing: Text("Task"),
-              //   ),
-              // ),
-              // const Divider(),
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.pushNamed(context, "/CovidDataScreen");
-              //   },
-              //   child: const ListTile(
-              //     leading: Icon(Icons.coronavirus),
-              //     title: Text("covid data"),
-              //     trailing: Text("covid data api"),
-              //   ),
-              // ),
+              BlocBuilder<TasksBloc, TasksState>(
+                builder: (context, state) {
+                  return GestureDetector(
+                    onTap: (() {
+                      Navigator.of(context)
+                          .pushReplacementNamed("/recycle_bin");
+                    }),
+                    child: ListTile(
+                      leading: const Icon(Icons.folder_special),
+                      title: const Text("Bin"),
+                      trailing: Text("${state.removeTask.length} Task"),
+                    ),
+                  );
+                },
+              ),
+              const Divider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, "/post_view");
+                },
+                child: const ListTile(
+                  leading: Icon(Icons.feed_rounded),
+                  title: Text("Post View"),
+                  trailing: Text("Posts"),
+                ),
+              ),
+              const Divider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, "/counter");
+                },
+                child: const ListTile(
+                  leading: Icon(Icons.add_circle_outline_rounded),
+                  title: Text("counter View"),
+                  trailing: Text("counter"),
+                ),
+              ),
+              const Divider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, "/counterBloc");
+                },
+                child: const ListTile(
+                  leading: Icon(Icons.add_circle_outline_rounded),
+                  title: Text("counter Bloc View"),
+                  trailing: Text("counter Bloc"),
+                ),
+              ),
+              const Divider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, "/CubitToCubit");
+                },
+                child: const ListTile(
+                  leading: Icon(Icons.add_circle_outline_rounded),
+                  title: Text("cubit to cubit"),
+                  trailing: Text("communication"),
+                ),
+              ),
+              const Divider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, "/TaskApp");
+                },
+                child: const ListTile(
+                  leading: Icon(Icons.task),
+                  title: Text("Udemy Task"),
+                  trailing: Text("Task"),
+                ),
+              ),
+              const Divider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, "/CovidDataScreen");
+                },
+                child: const ListTile(
+                  leading: Icon(Icons.coronavirus),
+                  title: Text("covid data"),
+                  trailing: Text("covid data api"),
+                ),
+              ),
             ],
           ),
         ),

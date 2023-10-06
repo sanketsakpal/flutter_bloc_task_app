@@ -58,8 +58,9 @@ class TasksBloc extends HydratedBloc<TasksEvent, TasksState> {
           ..insert(0, task.copyWith(isDone: false));
       } else {
         var taskIndex = favoriteTask.indexOf(task);
-        pendingTask = List.from(pendingTask)..remove(task);
-        completedTask.insert(0, task.copyWith(isDone: true, isFavorite: true));
+        completedTask = List.from(completedTask)..remove(task);
+        pendingTask = List.from(pendingTask)
+          ..insert(0, task.copyWith(isDone: false));
         favoriteTask = List.from(favoriteTask)
           ..remove(task)
           ..insert(
@@ -152,17 +153,15 @@ class TasksBloc extends HydratedBloc<TasksEvent, TasksState> {
           ..remove(event.task)
           ..insert(0, event.task.copyWith(isFavorite: true));
       } else {
-
-         var taskIndex = completedTask.indexOf(event.task);
-          completedTask = List.from(completedTask)
+        var taskIndex = completedTask.indexOf(event.task);
+        completedTask = List.from(completedTask)
           ..remove(event.task)
           ..insert(
             taskIndex,
             event.task.copyWith(isFavorite: false),
           );
 
-        favoriteTask = List.from(favoriteTask)
-          ..remove(event.task);
+        favoriteTask = List.from(favoriteTask)..remove(event.task);
       }
     }
 
